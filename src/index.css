@@ -1,13 +1,275 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: monospace;
+  color: #fff;
+  background-color: #080808;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 3px;
+  font-size: 0.7rem;
+}
+
+.input-wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label{
+  margin-bottom: 5px;
+  font-size: 0.7rem;
+}
+
+.input-wrapper input {
+    /* Remove defaults */
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #131313;
+  color: #fff;
+}
+
+.login-form img {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.button {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 8px 10px;
+  background-color: #fff;
+  color: #131313;
+  border-color: #ccc;
+  border: 1px solid;
+  border-radius: 5px;
+  height: fit-content;
+}
+
+
+.error {
+  color: #d12929;
+  font-size: 0.7rem;
+  margin-top: 5px;
+}
+
+.login-form-footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-page {
+  max-width: 800px;
+  display:flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
+}
+
+
+.torrent-list {
+  display:flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+}
+
+.torrent-list .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.torrent-list .bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.torrent-list .bottom-section-right {
+  display: flex;
+  gap: 10px;
+}
+
+.torrent-item {
+  border: 1px solid;
+  border-color: #333;
+  background-color: #131313;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.torrent-item .title {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #131313;
+  border-radius: 5px;
+  height: 5px;
+  width: 100%;
+}
+
+.progress-bar .progress {
+  background-color: #1a9226;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.top-section-right {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  /* padding: 5px 10px; */
+  background-color: #131313;
+  color: #fff;
+  border: 1px solid;
+  border-color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-button:hover {
+  background-color: #333;
+}
+
+.add-torrent {
+  margin-top: 80px;
+}
+
+.add-torrent-search-bar {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.add-torrent-search-bar .button {
+  min-width: 100px;
+}
+
+.add-torrent-search-bar .input-wrapper {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.search-result {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid;
+  border-color: #333;
+  background-color: #131313;
+  border-radius: 5px;
+}
+
+.search-result .title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.search-result .bottom{ 
+  display: flex;
+  gap: 10px;
+}
+
+.right {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  padding-left: 15px;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.logout {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.search-results-loader {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  width:100%;
 }
